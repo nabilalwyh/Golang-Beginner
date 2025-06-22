@@ -1,0 +1,52 @@
+// Nomor 1
+package main
+
+import "fmt"
+
+func main() {
+	var x string
+	x = "Nabila"
+	y = "Alawiyah"
+
+	fmt.Println("My name is", x)
+	fmt.Println("My last name is", y)
+}
+
+// Nomor 2
+package main
+
+import "fmt"
+
+func main() {
+	fmt.Println("25 + 4 = ", 25+4)
+}
+
+// Nomor 3
+package main
+
+import "fmt"
+
+func main() {
+	fmt.Println("Enter a number: ")
+	var input float32
+	fmt.Scanf("%f", &input)
+	output := input * 2
+	fmt.Println(output)
+}
+
+// Nomor 4
+package main
+
+import "fmt"
+
+func main() {
+	fmt.Println(true && false)
+	fmt.Println(true && true)
+
+	fmt.Println(true || false)
+	fmt.Println(true || true)
+
+	fmt.Println(!false)
+
+}
+
