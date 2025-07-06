@@ -9,35 +9,32 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 -->
 
 <link rel="import" href="../bower_components/polymer/polymer-element.html">
-<link rel="import" href="shared-styles.html">
 
-<dom-module id="my-view3">
+<dom-module id="my-view404">
   <template>
-    <style include="shared-styles">
+    <style>
       :host {
         display: block;
 
-        padding: 10px;
+        padding: 10px 20px;
       }
     </style>
 
-<!-- TODO: -->
-    <div class="card">
-      <div class="circle">3</div>
-      <h1>Tentang</h1>
-      <p>Selamat Datang</p>
-      <p>Ini adalah pembuatan front end dengan Framework PolymerJS</p>
-      <p>Nama saya Damara</p>
-      <p>NIM saya 51418626</p>
-      <p>Kelas saya 4IA18</p>
-      </div>
+    Oops you hit a 404. <a href="[[rootPath]]">Head back to home.</a>
   </template>
 
   <script>
-    class AboutPage extends Polymer.Element {
-      static get is() { return 'my-view3'; }
+    class MyView404 extends Polymer.Element {
+      static get is() { return 'my-view404'; }
+      static get properties() {
+        return {
+          // This shouldn't be neccessary, but the Analyzer isn't picking up
+          // Polymer.Element#rootPath
+          rootPath: String,
+        };
+      }
     }
 
-    window.customElements.define(AboutPage.is, AboutPage);
+    window.customElements.define(MyView404.is, MyView404);
   </script>
 </dom-module>
